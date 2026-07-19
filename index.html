@@ -42,8 +42,8 @@ body::before{
   pointer-events:none;
   z-index:0;
 }
-.wrap{max-width:1180px;margin:0 auto;padding:0 32px;position:relative;z-index:1;overflow:hidden;}
-@media(max-width:640px){.wrap{padding:0 20px;overflow:visible;}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px;position:relative;z-index:1;}
+@media(max-width:640px){.wrap{padding:0 20px;}}
 
 h1,h2,h3,.disp{
   font-family:'Oswald',sans-serif;
@@ -275,7 +275,6 @@ header.scrolled{
   display:flex;align-items:center;justify-content:center;
   padding:10px 0 30px;
   position:relative;
-  overflow:visible;
 }
 @media(max-width:640px){
   .book-mockup{
@@ -290,14 +289,13 @@ header.scrolled{
   position:relative;
   width:min(640px, 96vw);
   max-width:none;
-  margin:0 -40px;
   animation:floatBook 5s ease-in-out infinite;
 }
 @media(max-width:900px){
-  .book-img{width:min(640px, 100vw);margin:0 -32px;}
+  .book-img{width:min(640px, 95vw);}
 }
 @media(max-width:600px){
-  .book-img{width:min(640px, 110vw);margin:0 -60px;}
+  .book-img{width:min(640px, 92vw);}
 }
 .book-badge{
   position:absolute;
