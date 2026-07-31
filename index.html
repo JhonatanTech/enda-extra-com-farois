@@ -123,7 +123,7 @@
   --line: rgba(255,255,255,0.08);
   --ink: #f3f1ea;
   --muted: #93a1af;
-  --muted-2: #5f6c78;
+  --muted-2: #7d8b99;
   --amber: #ffb454;
   --amber-soft: #ffcf8a;
   --ember: #e4552f;
@@ -179,6 +179,17 @@ a{color:inherit;text-decoration:none;}
 .reveal-d3{transition-delay:.24s;}
 .reveal-d4{transition-delay:.32s;}
 
+/* ---------- acessibilidade ---------- */
+.sr-only{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
 /* ---------- hazard divider ---------- */
 .hazard{
   height:8px;
@@ -202,7 +213,7 @@ a{color:inherit;text-decoration:none;}
   position:relative;
 }
 .btn-primary{
-  background:linear-gradient(100deg, var(--ember) 0%, var(--ember-deep) 100%);
+  background:linear-gradient(100deg, #d04724 0%, var(--ember-deep) 100%);
   color:#fff5ec;
   box-shadow:0 10px 30px -8px rgba(228,85,47,0.55), inset 0 1px 0 rgba(255,255,255,0.15);
 }
@@ -483,7 +494,7 @@ section{position:relative;padding:110px 0;}
   background:var(--bg);
   border:2px solid var(--ember);
 }
-.tl-item h4{font-family:'Oswald';font-size:17px;text-transform:none;letter-spacing:0;color:var(--ink);margin-bottom:6px;}
+.tl-item h3{font-family:'Oswald';font-size:17px;text-transform:none;letter-spacing:0;color:var(--ink);margin-bottom:6px;}
 .tl-item p{color:var(--muted);font-size:15px;line-height:1.6;}
 
 /* ================= EARNINGS ================= */
@@ -597,7 +608,7 @@ section{position:relative;padding:110px 0;}
 .proof-side.before .lens{background:linear-gradient(160deg,#8a7a56,#4a4436);filter:blur(1px) saturate(0.6);}
 .proof-side.after .lens{background:conic-gradient(from 200deg,#fff7e8,#ffd79a,#ff9d5c,#e9edf0,#fff7e8);box-shadow:0 0 40px rgba(255,180,84,0.35);}
 .proof-side p{color:var(--muted);font-size:14.5px;line-height:1.6;text-align:center;}
-.proof-side h4{text-align:center;font-family:'Oswald';font-size:18px;color:var(--ink);margin-bottom:10px;}
+.proof-side h3{text-align:center;font-family:'Oswald';font-size:18px;color:var(--ink);margin-bottom:10px;}
 
 /* ================= PRICING ================= */
 .pricing{}
@@ -691,6 +702,8 @@ footer .legal{color:var(--muted-2);font-size:12.5px;font-family:'JetBrains Mono'
   </div>
 </header>
 
+<main>
+
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap hero-grid">
@@ -747,6 +760,7 @@ footer .legal{color:var(--muted-2);font-size:12.5px;font-family:'JetBrains Mono'
 <section class="story">
   <div class="wrap story-layout">
     <div class="reveal">
+      <h2 class="sr-only">De onde vem o método</h2>
       <div class="eyebrow">De onde isso vem</div>
       <p class="story-quote">"O problema nunca foi começar pequeno. O problema era não começar."
         <small>Autor do método</small>
@@ -754,19 +768,19 @@ footer .legal{color:var(--muted-2);font-size:12.5px;font-family:'JetBrains Mono'
     </div>
     <div class="timeline reveal reveal-d1">
       <div class="tl-item">
-        <h4>R$5 por lavagem</h4>
+        <h3>R$5 por lavagem</h3>
         <p>22 anos, trabalhando em lava-rápido, vendo os carros que sempre admirou passarem pela sua frente sem nunca fazer parte da sua realidade.</p>
       </div>
       <div class="tl-item">
-        <h4>A decisão simples</h4>
+        <h3>A decisão simples</h3>
         <p>Em vez de esperar ter dinheiro, decidiu aprender algo novo. Começou a observar, perguntar e ajudar em outros lava-rápidos — foi aí que viu a restauração de faróis pela primeira vez.</p>
       </div>
       <div class="tl-item">
-        <h4>Sem loja. Sem estrutura.</h4>
+        <h3>Sem loja. Sem estrutura.</h3>
         <p>Primeiros clientes atendidos na própria casa. Um farol por dia, só nos finais de semana, com o que tinha em mãos.</p>
       </div>
       <div class="tl-item">
-        <h4>6 meses depois</h4>
+        <h3>6 meses depois</h3>
         <p>Primeiro carro conquistado com o próprio esforço. Hoje, salão automotivo próprio — construído com exatamente o método deste ebook.</p>
       </div>
     </div>
@@ -852,13 +866,13 @@ footer .legal{color:var(--muted-2);font-size:12.5px;font-family:'JetBrains Mono'
       <div class="proof-side before">
         <div class="proof-tag">Antes</div>
         <div class="lens"></div>
-        <h4>Opaco. Amarelado. Sem vida.</h4>
+        <h3>Opaco. Amarelado. Sem vida.</h3>
         <p>O estado que 9 em cada 10 carros na rua têm — e que ninguém está cobrando pra resolver.</p>
       </div>
       <div class="proof-side after">
         <div class="proof-tag">Depois</div>
         <div class="lens"></div>
-        <h4>Transparente. Renovado. Vendido.</h4>
+        <h3>Transparente. Renovado. Vendido.</h3>
         <p>O resultado que justifica R$150 a R$500 — e que gera o próximo cliente sozinho.</p>
       </div>
     </div>
@@ -934,6 +948,8 @@ footer .legal{color:var(--muted-2);font-size:12.5px;font-family:'JetBrains Mono'
     <a href="https://kiwify.app/JsRd5pY" class="btn btn-primary">Quero começar agora</a>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap foot-row">

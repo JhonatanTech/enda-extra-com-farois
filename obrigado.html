@@ -21,7 +21,7 @@
   --line: rgba(255,255,255,0.08);
   --ink: #f3f1ea;
   --muted: #93a1af;
-  --muted-2: #5f6c78;
+  --muted-2: #7d8b99;
   --amber: #ffb454;
   --amber-soft: #ffcf8a;
   --ember: #e4552f;
@@ -80,7 +80,7 @@ a{color:inherit;text-decoration:none;}
   transition:transform .25s ease, box-shadow .25s ease;
 }
 .btn-primary{
-  background:linear-gradient(100deg, var(--ember) 0%, var(--ember-deep) 100%);
+  background:linear-gradient(100deg, #d04724 0%, var(--ember-deep) 100%);
   color:#fff5ec;
   box-shadow:0 12px 34px -8px rgba(228,85,47,0.6), inset 0 1px 0 rgba(255,255,255,0.15);
 }
@@ -175,7 +175,7 @@ header{padding:26px 0;border-bottom:1px solid var(--line);}
   font-family:'JetBrains Mono';font-size:9px;letter-spacing:0.08em;
   color:var(--ember);font-weight:700;
 }
-.file-meta h3{font-family:'Oswald';font-size:17px;text-transform:none;letter-spacing:0;margin-bottom:4px;}
+.file-meta .fname{font-family:'Oswald';font-size:17px;text-transform:none;letter-spacing:0;margin-bottom:4px;}
 .file-meta p{font-family:'JetBrains Mono';font-size:11.5px;color:var(--muted-2);}
 .access-steps{text-align:left;margin-bottom:4px;}
 .access-step{
@@ -267,6 +267,8 @@ footer .legal{color:var(--muted-2);font-size:12px;font-family:'JetBrains Mono';m
   </div>
 </header>
 
+<main>
+
 <!-- ========== CONFIRMAÇÃO ========== -->
 <section class="confirm">
   <div class="wrap">
@@ -281,7 +283,7 @@ footer .legal{color:var(--muted-2);font-size:12px;font-family:'JetBrains Mono';m
       <div class="file-row">
         <div class="file-icon"><span>PDF</span></div>
         <div class="file-meta">
-          <h3>Renda Extra com Faróis</h3>
+          <div class="fname">Renda Extra com Faróis</div>
           <p>Ebook completo · 10 capítulos · 35 páginas</p>
         </div>
       </div>
@@ -372,6 +374,8 @@ footer .legal{color:var(--muted-2);font-size:12px;font-family:'JetBrains Mono';m
     <div class="sig reveal d1">Jhonatan Torres</div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap foot-row">
