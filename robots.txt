@@ -1,0 +1,6 @@
+# Renda Extra com Faróis
+User-agent: *
+Allow: /
+Disallow: /obrigado.html
+
+Sitemap: https://rendaextracomfarois.com.br/sitemap.xml
