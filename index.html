@@ -45,6 +45,25 @@
      e a exibir a FAQ direto no resultado de busca.
      IMPORTANTE: ao mudar o preço, atualize também em "price" abaixo.
      =================================================================== -->
+
+<!-- ===================== Meta Pixel ===================== -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1080438954494395');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1080438954494395&ev=PageView&noscript=1"
+alt=""/></noscript>
+<!-- =================== fim Meta Pixel =================== -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1008,6 +1027,43 @@ document.querySelectorAll('.faq-item').forEach(item=>{
 const PRICE = "37,90";
 document.getElementById('priceValue').textContent = PRICE;
 document.getElementById('priceValueSticky').textContent = PRICE;
+
+// ---- eventos do Meta Pixel ----
+(function(){
+  if (typeof fbq !== 'function') return;
+
+  // InitiateCheckout: qualquer clique que leve ao checkout da Kiwify
+  document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      fbq('track', 'InitiateCheckout', {
+        content_name: 'Renda Extra com Faróis',
+        content_type: 'product',
+        value: 37.90,
+        currency: 'BRL'
+      });
+    });
+  });
+
+  // ViewContent: dispara quando a seção de preço entra na tela
+  var preco = document.getElementById('preco');
+  if (preco && 'IntersectionObserver' in window) {
+    var visto = false;
+    new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(e){
+        if (e.isIntersecting && !visto) {
+          visto = true;
+          fbq('track', 'ViewContent', {
+            content_name: 'Renda Extra com Faróis',
+            content_type: 'product',
+            value: 37.90,
+            currency: 'BRL'
+          });
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.4 }).observe(preco);
+  }
+})();
 </script>
 
 </body>
